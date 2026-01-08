@@ -1,26 +1,55 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage[polish]{babel}
+\usepackage[T1]{fontenc}
 \usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
 
-\title{Instrukcja uruchomienia}
-\author{Student}
+\geometry{a4paper, margin=2.5cm}
+
+\title{Temat B: Konfiguracja maszyny wirtualnej z systemem Ubuntu}
+\author{Jan Kowalski (Twój Nr Indeksu)} % Tutaj wpisz swoje dane
 \date{\today}
 
 \begin{document}
+
 \maketitle
+\tableofcontents
+\newpage
 
-\section{Konfiguracja}
-Aby uruchomić projekt, należy nadać uprawnienia skryptom.
+\section{Wstęp}
+Celem niniejszej instrukcji jest przedstawienie procesu instalacji i konfiguracji maszyny wirtualnej (VirtualBox) oraz instalacji systemu operacyjnego Linux Ubuntu. Środowisko to posłuży do bezpiecznego testowania skryptów i nauki administracji systemem.
 
-\section{Zrzut ekranu}
-Poniżej przedstawiono przykładowe działanie programu:
+\section{Wymagania wstępne}
+Przed przystąpieniem do pracy należy przygotować:
+\begin{itemize}
+    \item Obraz instalacyjny systemu Ubuntu (plik .iso).
+    \item Zainstalowane oprogramowanie Oracle VM VirtualBox.
+    \item Minimum 20 GB wolnego miejsca na dysku.
+\end{itemize}
+
+\section{Proces konfiguracji}
+
+\subsection{Tworzenie nowej maszyny}
+1. Otwórz program VirtualBox i kliknij ikonę \textbf{"New"}.
+2. Wpisz nazwę maszyny (np. "Ubuntu-Lab") i wybierz typ systemu "Linux".
+3. Przydziel pamięć RAM (zalecane minimum 4096 MB).
+
+\subsection{Instalacja systemu}
+Po uruchomieniu nowo utworzonej maszyny, wskaż pobrany wcześniej plik ISO. Rozpocznie się proces instalacji, który obejmuje wybór języka, układu klawiatury oraz utworzenie konta użytkownika.
+
+\section{Weryfikacja instalacji}
+Poniższy zrzut ekranu przedstawia poprawnie uruchomioną maszynę wirtualną z terminalem gotowym do pracy.
 
 \begin{figure}[h]
     \centering
-    % To jest miejsce, gdzie dokument szuka zdjęcia w folderze screenshots
+    % Upewnij się, że plik screen.png znajduje się w folderze screenshots
     \includegraphics[width=0.8\textwidth]{screenshots/screen.png}
-    \caption{Działanie skryptu}
+    \caption{Pomyślnie uruchomiony system Ubuntu w VirtualBox}
 \end{figure}
+
+\section{Podsumowanie}
+Maszyna wirtualna została poprawnie skonfigurowana i jest gotowa do realizacji zadań laboratoryjnych.
 
 \end{document}
