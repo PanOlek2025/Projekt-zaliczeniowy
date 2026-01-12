@@ -10,7 +10,6 @@ fi
 
 declare -A hashes
 
-# Szukanie duplikatów
 find "$SEARCH_DIR" -type f | while read file; do
     checksum=$(md5sum "$file" | awk '{print $1}')
     
@@ -18,7 +17,6 @@ find "$SEARCH_DIR" -type f | while read file; do
         echo "ZNALEZIONO DUPLIKAT:"
         echo "Duplikat: $file"
         
-        # Pytanie czy usunąć (wymóg zadania)
         read -p "Czy usunąć plik? [t/N] " odpowiedz < /dev/tty
         
         if [[ "$odpowiedz" == "t" || "$odpowiedz" == "T" ]]; then
